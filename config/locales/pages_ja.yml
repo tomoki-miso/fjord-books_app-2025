@@ -1,0 +1,15 @@
+ja:
+    common:
+        show_this_book: 詳細をみる
+        back_to_books: 一覧に戻る
+        new_book: 新しい本を追加
+
+    index:
+        books: 本一覧 
+
+    show:
+        edit_this_book: 編集する
+        destroy_this_book: 削除する
+
+    edit:
+        edit_book: 本を編集
