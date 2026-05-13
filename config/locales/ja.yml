@@ -201,6 +201,13 @@ ja:
       login_status_html: "<strong>%{name}</strong> でログイン中"
       sign_up: サインアップ
       log_in: ログイン
+      post_code: 郵便番号
+      address: 住所
+      bio: 自己紹介
+      leave_blank: 変更しない場合は空欄のままにしてください
+      confirm_password: パスワード変更のために、現在のパスワードを入力してください
+      cancel_my_account: アカウントを削除
+      unhappy: ご不満ですか？
   controllers:
     common:
       notice_create: "%{name}が作成されました。"
