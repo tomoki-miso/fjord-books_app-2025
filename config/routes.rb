@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get "users/indec"
   devise_for :users, controllers: {
     registrations: 'users/registrations' 
   }
+  resources :users, only: [:index,:show]
   root "books#index"   
   resources :books
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
