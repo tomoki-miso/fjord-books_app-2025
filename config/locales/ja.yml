@@ -197,6 +197,7 @@ ja:
       validation_error: "%{errors}があるため、この%{name}は保存できませんでした"
     user:
       edit_profile: ユーザー情報編集
+      user_list: ユーザー一覧
       logout: ログアウト
       login_status_html: "<strong>%{name}</strong> でログイン中"
       sign_up: サインアップ
