@@ -13,7 +13,7 @@
   <% end %>
 
   <div class="field">
-    <p><%= f.label :password %> <i><%= t('views.user.leave_blank') %></i></p>
+    <p><%= f.label :password %> <i><%= t('views.user.leave_blank') %> </i></p>
     <p><%= f.password_field :password, autocomplete: "new-password" %></p>
     <% if @minimum_password_length %>
       <p><em><%= @minimum_password_length %> characters minimum</em></p>
@@ -42,7 +42,7 @@
 
   <div class="field">
     <p><%= f.label :bio %></p>
-    <p><%= f.text_area :bio%></p>
+    <p><%= f.text_area :bio %></p>
   </div>
 
   <div class="actions">

@@ -31,8 +31,8 @@
       <%= link_to t('views.user.logout'), destroy_user_session_path, data: { turbo_method: :delete }, class: "navbar-link" %>|
       <%= link_to t('views.user.user_list'), users_path, class: "navbar-link" %>
     <% else %>
-      <%= link_to t('views.user.sign_up'), new_user_registration_path, class: "navbar-link"  %> |
-      <%= link_to t('views.user.log_in'), new_user_session_path, class: "navbar-link"  %>
+      <%= link_to t('views.user.sign_up'), new_user_registration_path, class: "navbar-link" %> |
+      <%= link_to t('views.user.log_in'), new_user_session_path, class: "navbar-link" %>
     <% end %>
     </p>
     <% if notice %>
