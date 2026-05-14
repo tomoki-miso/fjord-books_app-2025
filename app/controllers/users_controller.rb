@@ -3,7 +3,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show]
   def index
-    @users = User.order(:id)
+    @users = User.order(:id).page(params[:page]).per(2)
   end
 
   def show; end
