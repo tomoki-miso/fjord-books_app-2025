@@ -15,7 +15,7 @@ class ReportsController < ApplicationController
   def edit; end
 
   def create
-    @report = Report.new(report_params)
+    @report = current_user.reports.build(report_params)
 
     respond_to do |format|
       if @report.save
@@ -52,7 +52,11 @@ class ReportsController < ApplicationController
   private
 
   def set_report
-    @report = Report.find(params[:id])
+    @report = if action_name.in?(%w[edit update destroy])
+                current_user.reports.find(params[:id])
+              else
+                Report.find(params[:id])
+              end
   end
 
   def report_params
