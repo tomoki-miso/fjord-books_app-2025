@@ -12,6 +12,8 @@
         <%= render comment %>
     <% end %>
   </div>
+<% else %>
+  <p><%= t('views.common.no_items_found', name: Comment.model_name.human(count: :many)) %></p>
 <% end %>
 
 <%= render 'comments/form', commentable: @report, comment: @report.comments.build %>
