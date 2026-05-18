@@ -23,6 +23,8 @@ class CommentsController < ApplicationController
 
     redirect_to @commentable, alert: t('controllers.common.permission_denied') unless @comment.user == current_user
 
+    @comment.destroy!
+
     respond_to do |format|
       format.html { redirect_to @commentable, status: :see_other }
       format.turbo_stream
