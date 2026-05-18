@@ -5,11 +5,16 @@
 </div>
 
 <h2><%= Comment.model_name.human(count: :many) %></h2>
-<% if @report.comments.any? %>
-<div class='show-item'>
-  <%= render @report.comments %>
-</div>
+
+<% if @report.comments.present? %>
+  <div id="comments_list" class="index-items">
+    <% @report.comments.each do |comment| %>
+        <%= render comment %>
+    <% end %>
+  </div>
 <% end %>
+
+<%= render 'comments/form', commentable: @report, comment: @report.comments.build %>
 
 <nav class="page-nav">
     <% if @report.owner?(current_user) %>

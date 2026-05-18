@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   root to: 'books#index'
   resources :users, only: %i(index show)
   resources :books do
-    resources :comments, only: %i(index)
+    resources :comments, only: %i(index create)
   end
   resources :reports do
-    resources :comments, only: %i(index)
+    resources :comments, only: %i(index create)
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -1,7 +1,11 @@
-<div id="<%= dom_id comment %>">
+<div id="<%= dom_id comment  %>" class="show-item">
   <p>
     <strong><%= Comment.human_attribute_name(:user) %>:</strong>
-    <%= comment.user.name %>
+    <% if comment.user.name != "" %>
+      <%= comment.user.name %>
+    <% else %>
+      <%= comment.user.email %>
+    <% end %>
   </p>
 
   <p>
