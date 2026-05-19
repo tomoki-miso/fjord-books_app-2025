@@ -195,3 +195,9 @@ ja:
       edit: "%{name}を編集"
       list: "%{name}一覧"
       destroy: "この%{name}を削除"
+      validation_error: "%{errors}のため、%{name}を保存できませんでした"
+  controllers:
+    common:
+      create_success: "%{name}を作成しました"
+      update_success: "%{name}を更新しました"
+      destroy_success: "%{name}を削除しました"
