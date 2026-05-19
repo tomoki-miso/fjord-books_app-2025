@@ -116,6 +116,7 @@ ja:
     template:
       body: 次の項目を確認してください
       header: "%{model}に%{count}個のエラーが発生しました"
+
   helpers:
     select:
       prompt: 選択してください
@@ -186,3 +187,11 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+  views:
+    common:
+      show: "%{name}の詳細を表示"
+      back: "%{name}の一覧へ"
+      new: "新しい%{name}を追加"
+      edit: "%{name}を編集"
+      list: "%{name}一覧"
+      destroy: "この%{name}を削除"

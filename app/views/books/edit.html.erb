@@ -1,12 +1,12 @@
-<% content_for :title, t('edit.edit_book') %>
+<% content_for :title, t('application.title') %>
 
-<h1><%= t('edit.edit_book') %></h1>
+<h1><%= t('views.common.edit', name: t('activerecord.models.book')) %></h1>
 
 <%= render "form", book: @book %>
 
 <br>
 
 <div>
-  <%= link_to t('common.show_this_book'), @book %> |
-  <%= link_to t('common.back_to_books'), books_path %>
+  <%= link_to t('views.common.show', name: t('activerecord.models.book')), @book %> |
+  <%= link_to t('views.common.back', name: t('activerecord.models.book')), books_path %>
 </div>
