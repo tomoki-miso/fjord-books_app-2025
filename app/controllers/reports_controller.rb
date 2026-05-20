@@ -58,8 +58,7 @@ class ReportsController < ApplicationController
   end
 
   def sync_report_mentions!
-    mentioned_report_ids = report_ids_from_content(@report.content)
-
+    mentioned_report_ids = Report.extract_mentioned_report_ids(@report.content)
     @report.report_mentions.destroy_all
 
     mentioned_report_ids.each do |mentioned_report_id|
@@ -67,9 +66,5 @@ class ReportsController < ApplicationController
 
       @report.report_mentions.create!(mentioned_report_id: mentioned_report_id)
     end
-  end
-
-  def report_ids_from_content(content)
-    content.scan(%r{/reports/(\d+)}).flatten.map(&:to_i).uniq
   end
 end
