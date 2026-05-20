@@ -3,7 +3,7 @@
 <%= render @book %>
 
 <div>
-  <%= link_to t('views.common.edit', name: t('activerecord.models.book')), edit_book_path(@book) %> |
+  <%= link_to t('views.common.edit.title', name: t('activerecord.models.book')), edit_book_path(@book) %> |
   <%= link_to t('views.common.back', name: t('activerecord.models.book')), books_path %>
 
   <%= button_to t('views.common.destroy', name: t('activerecord.models.book')), @book, method: :delete %>
