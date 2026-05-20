@@ -18,7 +18,7 @@ class Report < ApplicationRecord
     created_at.to_date
   end
 
-  def self.extract_mentioned_report_ids(content)
+  def extract_mentioned_report_ids(content)
     content.to_s.scan(REPORT_URL_REGEXP).flatten.map(&:to_i).uniq
   end
 end

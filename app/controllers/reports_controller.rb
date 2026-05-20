@@ -58,7 +58,7 @@ class ReportsController < ApplicationController
   end
 
   def sync_report_mentions!
-    mentioned_report_ids = Report.extract_mentioned_report_ids(@report.content)
+    mentioned_report_ids = @report.extract_mentioned_report_ids(@report.content)
     @report.report_mentions.destroy_all
 
     mentioned_report_ids.each do |mentioned_report_id|
