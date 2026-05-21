@@ -1,8 +1,6 @@
 <% title = t('views.common.title_index', name: i18n_pluralize(Report.model_name.human)) %>
 <% content_for :title, title %>
-
 <h1><%= title %></h1>
-
 <div id="reports" class="index-items">
   <% @reports.each do |report| %>
     <div class="index-item">
@@ -13,9 +11,7 @@
     </div>
   <% end %>
 </div>
-
 <%= paginate @reports %>
-
 <nav class="page-nav">
   <%= link_to t('views.common.new', name: Report.model_name.human.downcase), new_report_path %>
 </nav>

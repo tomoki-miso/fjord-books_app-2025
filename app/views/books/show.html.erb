@@ -1,26 +1,20 @@
 <h1><%= t('views.common.title_show', name: Book.model_name.human) %></h1>
-
 <div class="show-item">
   <%= render @book %>
 </div>
-
 <h2><%= Comment.model_name.human(count: :many) %></h2>
-
 <% if @book.comments.present? %>
   <div id="comments_list" class="index-items">
     <% @book.comments.each do |comment| %>
-        <%= render comment %>
+      <%= render comment %>
     <% end %>
   </div>
-  <% else %>
+<% else %>
   <p><%= t('views.common.no_items_found', name: Comment.model_name.human(count: :many)) %></p>
 <% end %>
-
 <%= render 'comments/form', commentable: @book, comment: @book.comments.build %>
-
 <nav class="page-nav">
   <%= link_to t('views.common.edit', name: Book.model_name.human.downcase), edit_book_path(@book) %> |
   <%= link_to t('views.common.back', name: i18n_pluralize(Book.model_name.human.downcase)), books_path %>
-
   <%= button_to t('views.common.destroy', name: Book.model_name.human.downcase), @book, method: :delete %>
 </nav>
