@@ -9,11 +9,9 @@ class UsersController < ApplicationController
 
   def show; end
 
-  def set_user
-    @user = User.find(params.expect(:id))
-  end
+  private
 
-  def user_params
-    params.expect(user: %i[name email post_code address bio]).require(:user)
+  def set_user
+    @user = User.find(params[:id])
   end
 end
