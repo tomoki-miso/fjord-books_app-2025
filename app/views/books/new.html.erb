@@ -1,6 +1,6 @@
-<% content_for :title, t('application.title') %>
+<% content_for :title, t('views.common.new.title') %>
 
-<h1><%= t('views.common.new', name: t('activerecord.models.book')) %></h1>
+<h1><%= t('views.common.new.title', name: t('activerecord.models.book')) %></h1>
 
 <%= render "form", book: @book %>
 

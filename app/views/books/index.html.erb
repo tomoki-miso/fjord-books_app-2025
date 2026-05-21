@@ -1,8 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, t('application.title') %>
+<% content_for :title, t('views.common.list.title',name: t('activerecord.models.book')) %>
 
-<h1><%= t('views.common.list', name: t('activerecord.models.book')) %></h1>
+<h1><%= t('views.common.list.title', name: t('activerecord.models.book')) %></h1>
 
 <div id="books">
   <% @books.each do |book| %>
@@ -13,4 +13,4 @@
   <% end %>
 </div>
 
-<%= link_to t('views.common.new', name: t('activerecord.models.book')), new_book_path %>
+<%= link_to t('views.common.new.title', name: t('activerecord.models.book')), new_book_path %>
