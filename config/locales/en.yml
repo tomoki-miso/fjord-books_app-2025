@@ -245,7 +245,7 @@ en:
       back: "Back to %{name} list"
       new: "Add new %{name}"
       edit:
-        title: "Edit %{name}"
+        title: "Editing %{name}"
       list: "%{name} list"
       destroy: "Delete this %{name}"
       validation_error: "%{name} could not be saved because of %{errors}"
