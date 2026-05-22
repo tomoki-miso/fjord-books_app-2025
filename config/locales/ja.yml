@@ -195,6 +195,7 @@ ja:
         title: "新しい%{name}を追加"
       edit: 
         title: "%{name}の編集"
+        navigation: "%{name}を編集する"
       list: 
         title: "%{name}一覧"
       destroy: "この%{name}を削除"

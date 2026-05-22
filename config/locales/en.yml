@@ -241,13 +241,15 @@ en:
 
   views:
     common:
-      show: "Show %{name} details"
-      back: "Back to %{name} list"
-      new: "Add new %{name}"
+      show: "Show this %{name}"
+      back: "Back to %{name}"
+      new: 
+        title: "New %{name}"
       edit:
         title: "Editing %{name}"
+        navigation: "Edit this %{name}"
       list: "%{name} list"
-      destroy: "Delete this %{name}"
+      destroy: "Destroy this %{name}"
       validation_error: "%prohibited this %{name} from being saved:"
 
   controllers:
