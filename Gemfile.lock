@@ -440,17 +440,18 @@ DEPENDENCIES
   erb_lint
   faker
   i18n_generators
+  image_processing
   importmap-rails
   jbuilder
   kamal
   kaminari
   letter_opener_web
-  mini_magick
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.2)
   rubocop-fjord
   rubocop-rails-omakase
+  ruby-vips
   selenium-webdriver
   solid_cable
   solid_cache
