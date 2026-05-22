@@ -204,7 +204,6 @@ ja:
     user:
       logout: ログアウト
       login_status_html: "<strong>%{name}</strong> でログイン中"
-      sign_up: サインアップ
       log_in: ログイン
       validate_password_length: パスワードは%{count}文字以上で入力してください
       leave_blank: 変更しない場合は空欄のままにしてください
@@ -220,3 +219,6 @@ ja:
     registrations:
       edit:
         title: "アカウント編集"
+      new:
+        title: "サインアップ"
+        button: "アカウント登録する"
