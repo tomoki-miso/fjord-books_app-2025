@@ -248,7 +248,7 @@ en:
         title: "Editing %{name}"
       list: "%{name} list"
       destroy: "Delete this %{name}"
-      validation_error: "%{name} could not be saved because of %{errors}"
+      validation_error: "%prohibited this %{name} from being saved:"
 
   controllers:
     common:

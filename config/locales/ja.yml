@@ -198,7 +198,7 @@ ja:
       list: 
         title: "%{name}一覧"
       destroy: "この%{name}を削除"
-      validation_error: "%{errors}のため、%{name}を保存できませんでした"
+      validation_error: "%{name}を保存できませんでした"
   controllers:
     common:
       create_success: "%{name}を作成しました"
