@@ -1,0 +1,10 @@
+<h2><%= Comment.model_name.human(count: :many) %></h2>
+<% if commentable.comments.present? %>
+  <div id="comments_list" class="index-items">
+    <% commentable.comments.each do |comment| %>
+      <%= render comment %>
+    <% end %>
+  </div>
+<% else %>
+  <p><%= t('views.common.no_items_found', name: Comment.model_name.human(count: :many)) %></p>
+<% end %>

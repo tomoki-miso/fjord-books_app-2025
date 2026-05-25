@@ -2,16 +2,7 @@
 <div class="show-item">
   <%= render @book %>
 </div>
-<h2><%= Comment.model_name.human(count: :many) %></h2>
-<% if @book.comments.present? %>
-  <div id="comments_list" class="index-items">
-    <% @book.comments.each do |comment| %>
-      <%= render comment %>
-    <% end %>
-  </div>
-<% else %>
-  <p><%= t('views.common.no_items_found', name: Comment.model_name.human(count: :many)) %></p>
-<% end %>
+<%= render 'comments/comments', commentable: @book %>
 <%= render 'comments/form', commentable: @book, comment: @book.comments.build %>
 <nav class="page-nav">
   <%= link_to t('views.common.edit', name: Book.model_name.human.downcase), edit_book_path(@book) %> |
