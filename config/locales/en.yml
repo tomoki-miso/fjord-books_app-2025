@@ -3,14 +3,6 @@ en:
     title: "Books App"
 
   activerecord:
-    models:
-      book: Book
-    attributes:
-      book:
-        author: Author
-        memo: Memo
-        picture: Picture
-        title: Title
     errors:
       messages:
         record_invalid: 'Validation failed: %{errors}'
