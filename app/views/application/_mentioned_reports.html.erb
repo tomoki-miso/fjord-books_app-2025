@@ -1,7 +1,8 @@
 <div class="mentioned-reports">
   <strong><%= Report.human_attribute_name(:mentioned_reports) %>:</strong>
   <ul>
-      <% mentioned_reports.each do |report| %>
-        <li><%= link_to report.title, report %></li>
+    <% mentioned_reports.each do |report| %>
+      <li><%= link_to report.title, report %></li>
     <% end %>
+  </ul>
 </div>
