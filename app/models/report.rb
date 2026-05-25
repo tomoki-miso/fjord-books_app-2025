@@ -26,6 +26,19 @@ class Report < ApplicationRecord
     created_at.to_date
   end
 
+  def sync_report_mentions!
+    transaction do
+      mentioned_report_ids = extract_mentioned_report_ids(content).uniq
+      existing_report_ids = Report.where(id: mentioned_report_ids).pluck(:id)
+
+      report_mentions.destroy_all
+
+      existing_report_ids.each do |mentioned_report_id|
+        report_mentions.create!(mentioned_report_id: mentioned_report_id)
+      end
+    end
+  end
+
   def extract_mentioned_report_ids(content)
     content.to_s.scan(REPORT_URL_REGEXP).flatten.map(&:to_i).uniq
   end

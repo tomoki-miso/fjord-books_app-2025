@@ -21,7 +21,7 @@ class ReportsController < ApplicationController
     @report = current_user.reports.new(report_params)
 
     if @report.save
-      sync_report_mentions!
+      @report.sync_report_mentions!
 
       redirect_to @report, notice: t('controllers.common.notice_create', name: Report.model_name.human)
     else
@@ -31,7 +31,7 @@ class ReportsController < ApplicationController
 
   def update
     if @report.update(report_params)
-      sync_report_mentions!
+      @report.sync_report_mentions!
 
       redirect_to @report, notice: t('controllers.common.notice_update', name: Report.model_name.human)
     else
@@ -53,16 +53,5 @@ class ReportsController < ApplicationController
 
   def report_params
     params.expect(report: %i[title content])
-  end
-
-  def sync_report_mentions!
-    mentioned_report_ids = @report.extract_mentioned_report_ids(@report.content)
-    @report.report_mentions.destroy_all
-
-    mentioned_report_ids.each do |mentioned_report_id|
-      next unless Report.exists?(id: mentioned_report_id)
-
-      @report.report_mentions.create!(mentioned_report_id: mentioned_report_id)
-    end
   end
 end
