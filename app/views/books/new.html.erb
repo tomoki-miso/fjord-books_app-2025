@@ -1,11 +1,11 @@
 <% content_for :title, t('views.common.new.title') %>
 
-<h1><%= t('views.common.new.title', name: t('activerecord.models.book')) %></h1>
+<h1><%= t('views.common.new.title', name: Book.model_name.human) %></h1>
 
 <%= render "form", book: @book %>
 
 <br>
 
 <div>
-  <%= link_to t('views.common.back', name: t('activerecord.models.book')), books_path %>
+  <%= link_to t('views.common.back', name: Book.model_name.human), books_path %>
 </div>
