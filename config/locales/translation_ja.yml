@@ -19,6 +19,7 @@ ja:
         self_introduction: 自己紹介文
         avatar: ユーザ画像
       report:
+        user: ユーザ
         title: タイトル
         content: 内容
         time_stamp: 投稿日時
