@@ -36,14 +36,6 @@ class CommentsController < ApplicationController
 
   private
 
-  def set_commentable
-    @commentable = if params[:book_id]
-                     Book.find(params[:book_id])
-                   elsif params[:report_id]
-                     Report.find(params[:report_id])
-                   end
-  end
-
   def parent_show_template
     "#{@commentable.class.name.tableize}/show"
   end
