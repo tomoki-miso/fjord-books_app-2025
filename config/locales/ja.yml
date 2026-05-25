@@ -196,7 +196,7 @@ ja:
       edit: 
         title: "%{name}の編集"
         navigation: "%{name}を編集する"
-      list: 
+      index: 
         title: "%{name}一覧"
       destroy: "この%{name}を削除"
       validation_error: "%{name}を保存できませんでした"

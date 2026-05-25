@@ -240,7 +240,8 @@ en:
       edit:
         title: "Editing %{name}"
         navigation: "Edit this %{name}"
-      list: "%{name} list"
+      index: 
+        title: "%{name} list"
       destroy: "Destroy this %{name}"
       validation_error: "prohibited this %{name} from being saved:"
 

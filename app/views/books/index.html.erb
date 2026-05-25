@@ -1,8 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, t('views.common.list.title',name: Book.model_name.human) %>
+<% content_for :title, t('views.common.index.title',name: Book.model_name.human) %>
 
-<h1><%= t('views.common.list.title', name: Book.model_name.human) %></h1>
+<h1><%= t('views.common.index.title', name: Book.model_name.human) %></h1>
 
 <div id="books">
   <% @books.each do |book| %>
