@@ -76,6 +76,3 @@ gem 'carrierwave'
 gem 'devise'
 gem 'devise-i18n'
 gem 'kaminari'
-gem 'image_processing'
-
-gem 'ruby-vips'
