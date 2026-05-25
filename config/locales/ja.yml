@@ -196,13 +196,29 @@ ja:
       error: エラー
       validation_error: "%{errors}があるため、この%{name}は保存できませんでした"
     pagination:
-      first: '« 最初'
-      last: '最後 »'
-      previous: '‹ 前'
-      next: '次 ›'
-      truncate: '…'
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      previous: "&lsaquo; 前"
+      next: "次 &rsaquo;"
+      truncate: "&hellip;"
+    user:
+      logout: ログアウト
+      login_status_html: "<strong>%{name}</strong> でログイン中"
+      log_in: ログイン
+      validate_password_length: パスワードは%{count}文字以上で入力してください
+      leave_blank: 変更しない場合は空欄のままにしてください
+      confirm_password: パスワード変更のために、現在のパスワードを入力してください
+      cancel_my_account: アカウントを削除
+      unhappy: ご不満ですか？
   controllers:
     common:
       notice_create: "%{name}が作成されました。"
       notice_update: "%{name}が更新されました。"
-      notice_destroy: "%{name}が削除されました。"
+      notice_destroy: "%{name}が削除されました。"    
+  devise:
+    registrations:
+      edit:
+        title: "アカウント編集"
+      new:
+        title: "サインアップ"
+        button: "アカウント登録する"
