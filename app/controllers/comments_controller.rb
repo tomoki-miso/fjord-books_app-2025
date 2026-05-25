@@ -21,7 +21,10 @@ class CommentsController < ApplicationController
   def destroy
     @comment = @commentable.comments.find(params[:id])
 
-    redirect_to @commentable, alert: t('controllers.common.permission_denied') unless @comment.user == current_user
+    if @comment.user != current_user
+      redirect_to @commentable, alert: t('controllers.common.permission_denied') 
+      return
+    end
 
     @comment.destroy!
 
