@@ -1,4 +1,5 @@
 <% if @comment.persisted? %>
+  <%= turbo_stream.remove 'no_comments_found' %>
   <%= turbo_stream.append 'comments_list',
         partial: 'comments/comment',
         locals: { comment: @comment } %>
