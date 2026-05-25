@@ -1,7 +1,7 @@
 <div id="<%= dom_id comment  %>" class="show-item">
   <p>
     <strong><%= Comment.human_attribute_name(:user) %>:</strong>
-    <% if comment.user.name != "" %>
+    <% if comment.user.name.presence %>
       <%= comment.user.name %>
     <% else %>
       <%= comment.user.email %>
