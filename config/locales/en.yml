@@ -250,7 +250,7 @@ en:
         navigation: "Edit this %{name}"
       list: "%{name} list"
       destroy: "Destroy this %{name}"
-      validation_error: "%prohibited this %{name} from being saved:"
+      validation_error: "prohibited this %{name} from being saved:"
 
   controllers:
     common:
