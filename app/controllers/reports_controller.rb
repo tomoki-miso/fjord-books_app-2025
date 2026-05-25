@@ -54,11 +54,7 @@ class ReportsController < ApplicationController
   private
 
   def set_report
-    @report = if action_name.in?(%w[edit update destroy])
-                current_user.reports.find(params[:id])
-              else
-                Report.find(params[:id])
-              end
+    @report = current_user.reports.find(params[:id])
   end
 
   def report_params
