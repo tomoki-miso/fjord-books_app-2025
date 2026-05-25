@@ -254,6 +254,6 @@ en:
 
   controllers:
     common:
-      create_success: "%{name} was successfully created"
+      create_success: "%{name} was successfully created."
       update_success: "%{name} was successfully updated"
       destroy_success: "%{name} was successfully deleted"
