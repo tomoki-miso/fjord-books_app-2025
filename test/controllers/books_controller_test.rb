@@ -3,7 +3,9 @@
 require 'test_helper'
 
 class BooksControllerTest < ActionDispatch::IntegrationTest
+  include Warden::Test::Helpers
   setup do
+    login_as(users(:one), scope: :user)
     @book = books(:one)
   end
 

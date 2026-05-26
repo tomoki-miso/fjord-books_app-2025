@@ -3,7 +3,9 @@
 require 'test_helper'
 
 class ReportsControllerTest < ActionDispatch::IntegrationTest
+  include Warden::Test::Helpers
   setup do
+    login_as(users(:one), scope: :user)
     @report = reports(:one)
   end
 
