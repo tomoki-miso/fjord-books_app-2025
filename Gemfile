@@ -59,6 +59,7 @@ group :development do
   gem 'erb_lint', require: false
 
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'i18n_generators'
   gem 'web-console'
 end
 
