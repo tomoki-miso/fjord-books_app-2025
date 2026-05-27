@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
     @comment = @commentable.comments.find(params[:id])
 
     if @comment.user != current_user
-      redirect_to @commentable, alert: t('controllers.common.permission_denied') 
+      redirect_to @commentable, alert: t('controllers.common.permission_denied')
       return
     end
 
