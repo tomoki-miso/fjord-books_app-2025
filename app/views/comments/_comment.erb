@@ -1,7 +1,7 @@
 <div id="<%= dom_id comment  %>" class="show-item">
   <p>
     <strong><%= Comment.human_attribute_name(:user) %>:</strong>
-    <%= report.user.name.presence || report.user.email %>
+    <%= comment.user.display_name %>
   </p>
 
   <p>
