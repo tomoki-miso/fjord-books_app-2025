@@ -1,0 +1,25 @@
+<div id="<%= dom_id comment  %>" class="show-item">
+  <p>
+    <strong><%= Comment.human_attribute_name(:user) %>:</strong>
+    <%= comment.user.display_name %>
+  </p>
+
+  <p>
+    <strong><%= Comment.human_attribute_name(:content) %>:</strong>
+    <%= comment.content %>
+  </p>
+
+  <p>
+    <strong><%= Comment.human_attribute_name(:created_at) %>:</strong>
+    <%= comment.created_at.strftime("%Y年%m月%d日 %H:%M") %>
+  </p>
+
+  <% if comment.user == current_user %>
+    <%= link_to t('views.common.destroy', name: Comment.model_name.human.downcase),
+                [comment.commentable, comment],
+                data: {
+                  turbo_method: :delete,
+                } %>
+  <% end %>
+
+</div>

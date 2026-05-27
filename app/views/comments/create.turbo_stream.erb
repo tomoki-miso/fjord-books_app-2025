@@ -1,0 +1,13 @@
+<% if @comment.persisted? %>
+  <%= turbo_stream.remove 'no_comments_found' %>
+  <%= turbo_stream.append 'comments_list',
+        partial: 'comments/comment',
+        locals: { comment: @comment } %>
+  <%= turbo_stream.replace 'comment_form',
+        partial: 'comments/form',
+        locals: { commentable: @commentable, comment: @commentable.comments.build } %>
+<% else %>
+  <%= turbo_stream.replace 'comment_form',
+        partial: 'comments/form',
+        locals: { commentable: @commentable, comment: @comment } %>
+<% end %>
