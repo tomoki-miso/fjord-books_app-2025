@@ -33,10 +33,6 @@ class Report < ApplicationRecord
     end
   end
 
-  def extract_mentioned_report_ids(content)
-    content.to_s.scan(REPORT_URL_REGEXP).flatten.map(&:to_i).uniq
-  end
-
   private
 
   def sync_report_mentions!
@@ -48,5 +44,9 @@ class Report < ApplicationRecord
     existing_report_ids.each do |mentioned_report_id|
       report_mentions.create!(mentioned_report_id: mentioned_report_id)
     end
+  end
+
+  def extract_mentioned_report_ids(content)
+    content.to_s.scan(REPORT_URL_REGEXP).flatten.map(&:to_i).uniq
   end
 end
