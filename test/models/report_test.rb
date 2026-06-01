@@ -17,8 +17,9 @@ class ReportTest < ActiveSupport::TestCase
   end
 
   test 'created_on returns created_at date' do
-    report = reports(:one)
-    assert_equal report.created_at.to_date, report.created_on
+    date = Date.new(2026, 5, 1)
+    report = Report.new(created_at: date)
+    assert_equal date, report.created_on
   end
 
   test 'save_mentions adds mentioned reports from content' do
