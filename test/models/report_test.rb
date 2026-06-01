@@ -72,4 +72,20 @@ class ReportTest < ActiveSupport::TestCase
     )
     assert_equal [new_mentioned_report.id], report.mentioning_reports.reload.pluck(:id)
   end
+
+  test 'save_mentions adds new mentions' do
+    report = reports(:one)
+    old_mentioned_report = reports(:two)
+    new_mentioned_report = reports(:three)
+    report.update!(
+      content: "古いメンション http://localhost:3000/reports/#{old_mentioned_report.id}"
+    )
+
+    assert_includes report.mentioning_reports.reload, old_mentioned_report
+
+    report.update!(
+      content: "古いメンション http://localhost:3000/reports/#{old_mentioned_report.id} \n 新しいメンション http://localhost:3000/reports/#{new_mentioned_report.id}"
+    )
+    assert_includes report.mentioning_reports.reload, new_mentioned_report
+  end
 end
