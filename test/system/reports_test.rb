@@ -98,5 +98,7 @@ class ReportsTest < ApplicationSystemTestCase
     click_on 'この日報を削除', match: :first
 
     assert_text '日報が削除されました。'
+    assert_no_text @report.title
+    assert_no_text @report.content
   end
 end
