@@ -23,6 +23,9 @@ class BooksTest < ApplicationSystemTestCase
     click_on '登録する'
 
     assert_text '本が作成されました。'
+    assert_text @book.title
+    assert_text @book.memo
+    assert_text @book.author
     click_on '本の一覧に戻る'
   end
 
@@ -36,6 +39,9 @@ class BooksTest < ApplicationSystemTestCase
     click_on '更新する'
 
     assert_text '本が更新されました。'
+    assert_text @book.title
+    assert_text @book.memo
+    assert_text @book.author
     click_on '本の一覧に戻る'
   end
 
